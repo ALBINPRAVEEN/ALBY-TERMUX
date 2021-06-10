@@ -1,16 +1,16 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/data/data/com.TERMUX/files/usr/bin/bash
 ######################################
-#        PROJECT: ALBY-Termux        #
+#        PROJECT: ALBY-TERMUX        #
 #        Author: Alby                #
 #  email:albinpraveen135790@gmailcom #
 ######################################
 
-# Installing the following packages to install ALBY-Termux
+# Installing the following packages to install ALBY-TERMUX
 echo 
-echo -e "\e[32m[*]\e[34m Installing ALBY-Termux \e[m "
+echo -e "\e[32m[*]\e[34m Installing ALBY-TERMUX \e[m "
 echo
 # storage permission
-termux-setup-storage
+TERMUX-setup-storage
 
 echo
 
@@ -44,7 +44,7 @@ apt-get install toilet -y
 # now installing ncurses-utils
 pkg install ncurses-utils -y
 
-# install cowsay in termux if not installed
+# install cowsay in TERMUX if not installed
 apt-get install cowsay -y
 
 #installing nano
@@ -63,7 +63,7 @@ mv figlet-fonts/* figlet &&  rm -rf figlet-fonts
 cd $HOME
 
 
-# ALBY-Termux Banner 
+# ALBY-TERMUX Banner 
 
 clear
 echo 
@@ -89,7 +89,7 @@ echo "             ☆::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 sleep 3
 echo 
 echo
-echo "[*] Installing ALBY-Termux  " |lolcat
+echo "[*] Installing ALBY-TERMUX  " |lolcat
 echo
 sleep 4
 echo "[*] Please Wait " |lolcat
@@ -108,7 +108,7 @@ sleep 2
 # cursor to normal
 
 # change directory to etc
-cd /data/data/com.termux/files/usr/etc
+cd /data/data/com.TERMUX/files/usr/etc
 
 # remove old bash.bashrc
 rm bash.bashrc
@@ -117,30 +117,30 @@ rm -rf motd
 #Change dir to ~
 cd $HOME
 
-# Change dir to ALBY-Termux
-cd ALBY-Termux
+# Change dir to ALBY-TERMUX
+cd ALBY-TERMUX
 
 #copy new bash.bashrc to usr/etc
-cp bash.bashrc /data/data/com.termux/files/usr/etc
+cp bash.bashrc /data/data/com.TERMUX/files/usr/etc
 
 #check old file exits or not if exits remove it and replace it
-tfile="${PREFIX}/bin/uninstall-ALBY-Termux"
+tfile="${PREFIX}/bin/uninstall-ALBY-TERMUX"
 if [ -f "$tfile" ]
 then
-rm ${PREFIX}/bin/uninstall-ALBY-Termux
+rm ${PREFIX}/bin/uninstall-ALBY-TERMUX
 else 
 echo
 fi
 
-# copy uninstall ALBY-Termux
-chmod +x uninstall-ALBY-Termux
-cp uninstall-ALBY-Termux ${PREFIX}/bin
+# copy uninstall ALBY-TERMUX
+chmod +x uninstall-ALBY-TERMUX
+cp uninstall-ALBY-TERMUX ${PREFIX}/bin
 
 #chanage dir to home
 cd $HOME
 
-#change directory to ALBY-Termux
-cd ALBY-Termux
+#change directory to ALBY-TERMUX
+cd ALBY-TERMUX
 
 #from here copying the hacker.mp3 sound to the sdcard of the user
 cp hacker.mp3 /sdcard
@@ -162,7 +162,7 @@ sleep 4
 echo -e "\033[1;34m[*]\e[33m Reading packages \e[m "
 echo
 sleep 5
-echo -e "\033[1;34m[*]\e[33m Securing termux-login \e[m "
+echo -e "\033[1;34m[*]\e[33m Securing TERMUX-login \e[m "
 echo
 sleep 2
 echo -e "\033[1;34m[*]\e[33m Please Wait \e[m "
@@ -203,32 +203,32 @@ bash ALBY.sh
 # select the option to the setup the theme
 # check if dir or files exist
 
-#Dir=.termux
-DIR="$HOME/.termux"
+#Dir=.TERMUX
+DIR="$HOME/.TERMUX"
  if [ -d "$DIR" ]
 then 
   echo
 else
-  mkdir $HOME/.termux
+  mkdir $HOME/.TERMUX
 fi
 
-#file1=termux.properties
-FILE="$HOME/.termux/termux.properties"
+#file1=TERMUX.properties
+FILE="$HOME/.TERMUX/TERMUX.properties"
 if [ -f "$FILE" ]
 then 
   echo
 else
-  cd $HOME/.termux/
-  touch termux.properties
+  cd $HOME/.TERMUX/
+  touch TERMUX.properties
 fi
 
 #file2=colors.properties
-FILES1="$HOME/.termux/colors.properties"
+FILES1="$HOME/.TERMUX/colors.properties"
 if [ -f "FILES1" ]
  then
   echo 
  else 
-  cd $HOME/.termux/
+  cd $HOME/.TERMUX/
   touch colors.properties
  fi
  
@@ -243,11 +243,11 @@ fi
  
 clear
 cd $HOME
-cd ALBY-Termux
+cd ALBY-TERMUX
 
 #start a loop for invalid option
 #user define themes 
-#The top 14 best themes for termux
+#The top 14 best themes for TERMUX
 
 #start of while loop
 #Themes Banner
@@ -259,7 +259,7 @@ echo "===============================" |lolcat
 echo "    Various themes options" |lolcat
 echo "===============================" |lolcat
 echo
-echo -e "\e[31m[\e[33m01\e[31m]\e[32m best of ALBY-Termux \e[m "
+echo -e "\e[31m[\e[33m01\e[31m]\e[32m best of ALBY-TERMUX \e[m "
 echo -e "\e[31m[\e[33m02\e[31m]\e[32m black on white \e[m "
 echo -e "\e[31m[\e[33m03\e[31m]\e[32m dark properties \e[m "
 echo -e "\e[31m[\e[33m04\e[31m]\e[32m forest dark \e[m "
@@ -278,8 +278,8 @@ read -p $'\e[32m>> Select your theme:\e[m ' n
 tput civis
 if [ $n = 1 ] || [ $n = 01 ]
 then
- cd properties/ALBY-Termux_colors
- cat best-of-ALBY-Termux > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat best-of-ALBY-TERMUX > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -293,8 +293,8 @@ then
  break
 elif [ $n = 2 ] || [ $n = 02 ]
 then
- cd properties/ALBY-Termux_colors
- cat black-on-white > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat black-on-white > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -308,8 +308,8 @@ then
  break
 elif [ $n = 3 ] || [ $n = 03 ]
 then
- cd properties/ALBY-Termux_colors
- cat dark-properties > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat dark-properties > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -323,8 +323,8 @@ then
  break
  elif [ $n = 4 ] || [ $n = 04 ]
 then
- cd properties/ALBY-Termux_colors
- cat forest-dark > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat forest-dark > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -338,8 +338,8 @@ then
  break
  elif [ $n = 5 ] || [ $n = 05 ]
 then
- cd properties/ALBY-Termux_colors
- cat forest-light > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat forest-light > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -353,8 +353,8 @@ then
  break
  elif [ $n = 6 ] || [ $n = 06 ]
 then
- cd properties/ALBY-Termux_colors
- cat green-on-black > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat green-on-black > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -368,8 +368,8 @@ then
  break
  elif [ $n = 7 ] || [ $n = 07 ]
 then
- cd properties/ALBY-Termux_colors
- cat isotope-dark > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat isotope-dark > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -383,8 +383,8 @@ then
  break
  elif [ $n = 8 ] || [ $n = 08 ]
 then
- cd properties/ALBY-Termux_colors
- cat isotope-light > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat isotope-light > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -398,8 +398,8 @@ then
  break
  elif [ $n = 9 ] || [ $n = 09 ]
 then
- cd properties/ALBY-Termux_colors
- cat neon-properties > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat neon-properties > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -413,8 +413,8 @@ then
  break
  elif [ $n = 10 ] 
 then
- cd properties/ALBY-Termux_colors
- cat night-properties > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat night-properties > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -428,8 +428,8 @@ then
  break
  elif [ $n = 11 ] 
 then
- cd properties/ALBY-Termux_colors
- cat solarized-dark > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat solarized-dark > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -443,8 +443,8 @@ then
  break
  elif [ $n = 12 ] 
 then
- cd properties/ALBY-Termux_colors
- cat solarized-light > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat solarized-light > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -458,8 +458,8 @@ then
  break
  elif [ $n = 13 ] 
 then
- cd properties/ALBY-Termux_colors
- cat white-on-black > $HOME/.termux/colors.properties
+ cd properties/ALBY-TERMUX_colors
+ cat white-on-black > $HOME/.TERMUX/colors.properties
  echo
  echo -e "\e[33m>> Setting theme \e[m"
  sleep 2
@@ -474,10 +474,10 @@ then
   elif [ $n = 14 ] 
 then
 echo
-tmuxcolor="$HOME/.termux/colors.properties"
+tmuxcolor="$HOME/.TERMUX/colors.properties"
 if [ -f "$tmuxcolor" ];
 then
- rm $HOME/.termux/colors.properties
+ rm $HOME/.TERMUX/colors.properties
 else
  echo
 fi
@@ -499,7 +499,7 @@ else
 fi
 done
 
-# ALBY-Termux Cursor
+# ALBY-TERMUX Cursor
 # A user can set a cursor as demanded
 
 # cursor()
@@ -509,7 +509,7 @@ do
 echo 
 echo
 echo "==========================" |lolcat
-echo "    Set ALBY-Termux cursor" | lolcat -t
+echo "    Set ALBY-TERMUX cursor" | lolcat -t
 echo "==========================" |lolcat
 echo
 echo "1] Block >> ' ▌ ' " | lolcat -t
@@ -570,11 +570,11 @@ tput cnorm
 # save a session shortcut
 # dir checker
 
-if [ -f ~/.termux/termux.properties ]
+if [ -f ~/.TERMUX/TERMUX.properties ]
 then 
 echo
 else 
-touch  ~/.termux/termux.properties
+touch  ~/.TERMUX/TERMUX.properties
 fi 
 
 # shortut
@@ -585,7 +585,7 @@ echo -e "\e[36m================================\e[m"
 echo -e "\e[32m            NOTE \e[m" 
 echo -e "\e[36m================================\e[m" 
 echo
-echo -e "\e[34m[\e[31m*\e[34m] \e[32mALBY-Termux has created a session shortcut\e[m" 
+echo -e "\e[34m[\e[31m*\e[34m] \e[32mALBY-TERMUX has created a session shortcut\e[m" 
 echo 
 echo -e "\e[36m[\e[32m*\e[36m]\e[32m New session shortcut ---> CTRL + n \e[m"
 echo 
@@ -601,7 +601,7 @@ if [ "$answer" != "${answer#[Yy]}" ]
 then
 echo "shortcut.create-session = ctrl + n
 shortcut.next-session = ctrl + l
-shortcut.previous-session = ctrl + p" >> ~/.termux/termux.properties
+shortcut.previous-session = ctrl + p" >> ~/.TERMUX/TERMUX.properties
 echo
 sleep 1
 echo
@@ -619,12 +619,12 @@ fi
 
 # take action if dir !
 cd $HOME
-cd ALBY-Termux/properties/ALBY-Termux_fonts/
-if [  -f ~/.termux/font.ttf ]
+cd ALBY-TERMUX/properties/ALBY-TERMUX_fonts/
+if [  -f ~/.TERMUX/font.ttf ]
 then 
 echo 
 else 
-touch ~/.termux/font.ttf
+touch ~/.TERMUX/font.ttf
 fi 
 
 clear
@@ -638,7 +638,7 @@ echo "============================" |lolcat -t
 echo "     select your Font       " |lolcat -t
 echo "============================" |lolcat -t
 echo
-echo -e "\e[31m[\e[32m01\e[31m]\e[32m Best of ALBY-Termux " 
+echo -e "\e[31m[\e[32m01\e[31m]\e[32m Best of ALBY-TERMUX " 
 echo -e "\e[31m[\e[32m02\e[31m]\e[32m Anonymous "
 echo -e "\e[31m[\e[32m03\e[31m]\e[32m Robot "
 echo -e "\e[31m[\e[32m04\e[31m]\e[32m DejaVu "
@@ -657,8 +657,8 @@ tput civis
 
 if [ $font = 1 ] || [ $font = 01 ]
 then
-cat "OpenDyslexic.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "OpenDyslexic.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -669,8 +669,8 @@ sleep 2
 break
 elif [ $font = 2 ] || [ $font = 02 ]
 then
-cat "Anonymous-Pro.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "Anonymous-Pro.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -681,8 +681,8 @@ sleep 2
 break
 elif [ $font = 3 ] || [ $font = 03 ]
 then
-cat "Roboto.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "Roboto.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -693,8 +693,8 @@ sleep 2
 break
 elif [ $font = 4 ] || [ $font = 04 ]
 then
-cat "DejaVu.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "DejaVu.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -705,8 +705,8 @@ sleep 2
 break
 elif [ $font = 5 ] || [ $font = 05 ]
 then
-cat "Fantasque.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "Fantasque.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -717,8 +717,8 @@ sleep 2
 break
 elif [ $font = 6 ] || [ $font = 06 ]
 then
-cat "FiraCode.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "FiraCode.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -729,8 +729,8 @@ sleep 2
 break
 elif [ $font = 7 ] || [ $font = 07 ]
 then
-cat "Ubuntu.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "Ubuntu.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -741,8 +741,8 @@ sleep 2
 break
 elif [ $font = 8 ] || [ $font = 08 ]
 then
-cat "Monofur.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "Monofur.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -753,8 +753,8 @@ sleep 2
 break
 elif [ $font = 9 ] || [ $font = 09 ]
 then
-cat "Courier-Prime.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "Courier-Prime.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -765,8 +765,8 @@ sleep 2
 break
 elif [ $font = 10 ] 
 then
-cat "cursive.ttf" > ~/.termux/font.ttf
-echo "-->> changing termux font" |lolcat -t
+cat "cursive.ttf" > ~/.TERMUX/font.ttf
+echo "-->> changing TERMUX font" |lolcat -t
 sleep 2
 echo
 echo "-->> Reloading settings" |lolcat -t
@@ -810,36 +810,36 @@ fi
 tput cup 20 0
 figlet -f slant "ALBY" |lolcat
 
-#done setting up Termux terminal as a real hacker
+#done setting up TERMUX terminal as a real hacker
 
-# setting up making a changes to a termux
+# setting up making a changes to a TERMUX
 # Dir checker 
-# dir=.termux
-DIR="$HOME/.termux"
+# dir=.TERMUX
+DIR="$HOME/.TERMUX"
  if [ -d "$DIR" ]
 then 
   echo
 else
-  mkdir $HOME/.termux
+  mkdir $HOME/.TERMUX
 fi
 
 #files checker
-#file=termux.properties
-FILE="$HOME/.termux/termux.properties"
+#file=TERMUX.properties
+FILE="$HOME/.TERMUX/TERMUX.properties"
 if [ -f "$FILE" ]
 then 
   echo
 else
-  cd $HOME/.termux/
-  touch termux.properties
+  cd $HOME/.TERMUX/
+  touch TERMUX.properties
 fi
 
-# Termux bell characterstics
+# TERMUX bell characterstics
 cd $HOME
-echo "bell-character=ignore" >> /data/data/com.termux/files/home/.termux/termux.properties && termux-reload-settings
+echo "bell-character=ignore" >> /data/data/com.TERMUX/files/home/.TERMUX/TERMUX.properties && TERMUX-reload-settings
 echo
 
 #########################################################################
-#                        ALBY-Termux                                        #
+#                        ALBY-TERMUX                                        #
 #  simply changing this banner will not make you developer of this tool #
 #########################################################################
