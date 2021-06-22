@@ -32,15 +32,16 @@ pkg update && pkg upgrade && pkg install git -y
 
 git clone https://github.com/ALBINPRAVEEN/ALBY-TERMUX
 
-$ ls
+ ls
 
-$ cd ALBY-TERMUX
+ cd ALBY-TERMUX
 
-$ ls
+ ls
 
-$ chmod +x *
+ chmod +x *
 
-$ bash ALBY-TERMUX.sh
+
+ bash ALBY-TERMUX.sh
 ```
 
 
